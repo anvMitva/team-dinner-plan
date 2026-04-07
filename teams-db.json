@@ -1,0 +1,30 @@
+{
+  "records": [
+    {
+      "id": 3,
+      "savedAt": "2026-04-07T13:22:40.438Z",
+      "data": {
+        "generatedAt": "2026-04-07T13:22:40.436Z",
+        "teamAName": "Tensor Titans",
+        "teamAPlayers": [
+          "pratham",
+          "mitva",
+          "asha"
+        ],
+        "teamALeaders": {
+          "captain": "asha",
+          "viceCaptain": "mitva"
+        },
+        "teamBName": "Open Source Orbit",
+        "teamBPlayers": [
+          "harsh",
+          "harshil"
+        ],
+        "teamBLeaders": {
+          "captain": "harsh",
+          "viceCaptain": "harshil"
+        }
+      }
+    }
+  ]
+}

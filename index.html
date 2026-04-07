@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Team Match Center</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-shape bg-shape-a" aria-hidden="true"></div>
+  <div class="bg-shape bg-shape-b" aria-hidden="true"></div>
+
+  <main class="app-shell">
+    <header class="hero topbar">
+      <div>
+        <p class="kicker">Teams</p>
+      </div>
+      <div class="page-actions">
+        <a class="btn btn-primary" href="add-team.html">Update Team</a>
+      </div>
+    </header>
+
+    <section class="panel history-panel" id="historyPanel">
+      <h2 class="history-title">Saved Matchups</h2>
+      <div class="history-list" id="historyList"></div>
+      <p class="history-empty" id="historyEmpty">No saved matchups yet.</p>
+    </section>
+  </main>
+
+  <script src="landing.js"></script>
+</body>
+</html>

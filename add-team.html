@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Update Team | Team Match Center</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-shape bg-shape-a" aria-hidden="true"></div>
+  <div class="bg-shape bg-shape-b" aria-hidden="true"></div>
+
+  <main class="app-shell">
+    <header class="hero topbar">
+      <div>
+        <p class="kicker">Team Generator</p>
+        <h1>Update And Shuffle Teams</h1>
+        <p class="subtitle">Enter player names, generate random teams, and replace old saved data.</p>
+      </div>
+      <div class="page-actions">
+        <a class="btn btn-ghost" href="index.html">Back To Landing</a>
+      </div>
+    </header>
+
+    <section class="panel input-panel">
+      <label for="playerInput">Players (one per line or separated by commas)</label>
+      <textarea id="playerInput" placeholder="Aarav
+Sana
+Riya
+Dev
+..." rows="10"></textarea>
+
+      <div class="actions">
+        <button id="generateBtn" class="btn btn-primary" type="button">Update Teams</button>
+        <button id="shuffleBtn" class="btn btn-ghost" type="button" disabled>Re-Shuffle Same Players</button>
+        <button id="exportTxtBtn" class="btn btn-ghost" type="button" disabled>Export TXT</button>
+        <button id="exportPdfBtn" class="btn btn-ghost" type="button" disabled>Export PDF</button>
+        <button id="exportJsonBtn" class="btn btn-ghost" type="button" disabled>Export JSON</button>
+        <button id="clearBtn" class="btn btn-ghost" type="button">Clear</button>
+      </div>
+
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="results" id="results" hidden>
+      <article class="panel team-card" id="teamA">
+        <h2 class="team-title"></h2>
+        <ul class="team-list"></ul>
+      </article>
+
+      <article class="panel team-card" id="teamB">
+        <h2 class="team-title"></h2>
+        <ul class="team-list"></ul>
+      </article>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
