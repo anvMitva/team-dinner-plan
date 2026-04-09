@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Team Match Center</title>
+  <title>IPL Match Dashboard</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet" />
@@ -16,20 +16,50 @@
   <main class="app-shell">
     <header class="hero topbar">
       <div>
-        <p class="kicker">Teams</p>
+        <p class="kicker">IPL Schedule Hub</p>
+        <h1>Today And Upcoming Matches</h1>
+        <p class="subtitle">Live schedule view with tagging, IDs, and quick navigation.</p>
       </div>
       <div class="page-actions">
-        <a class="btn btn-primary" href="add-team.html">Update Team</a>
+        <a class="btn btn-primary" href="matches.html">View More</a>
       </div>
     </header>
 
-    <section class="panel history-panel" id="historyPanel">
-      <h2 class="history-title">Saved Matchups</h2>
-      <div class="history-list" id="historyList"></div>
-      <p class="history-empty" id="historyEmpty">No saved matchups yet.</p>
+    <section class="panel section-panel">
+      <div class="section-head">
+        <h2>Today's Matches</h2>
+        <span class="pill">Today</span>
+      </div>
+      <div id="todayMatches" class="cards-grid"></div>
+      <p id="todayEmpty" class="history-empty" hidden>No match scheduled for today.</p>
+    </section>
+
+    <section class="panel section-panel">
+      <div class="section-head">
+        <h2>Upcoming (Next 2 Days)</h2>
+        <span class="pill pill-upcoming">Upcoming</span>
+      </div>
+      <div id="upcomingMatches" class="cards-grid"></div>
+      <p id="upcomingEmpty" class="history-empty" hidden>No upcoming matches in next 2 days.</p>
+    </section>
+
+    <section class="panel section-panel">
+      <div class="section-head">
+        <h2>Team Option</h2>
+        <span class="pill pill-upcoming">Teams</span>
+      </div>
+      <div id="teamOptionCard" class="team-option-card" hidden>
+        <h3 id="teamOptionTitle" class="match-teams"></h3>
+        <p id="teamOptionMeta" class="match-meta"></p>
+        <div class="page-actions">
+          <a id="teamOptionView" class="btn btn-ghost" href="team-details.html">View Team</a>
+          <a id="teamOptionUpdate" class="btn btn-primary" href="add-team.html">Update Team</a>
+        </div>
+      </div>
+      <p id="teamOptionEmpty" class="history-empty" hidden>No team data saved yet.</p>
     </section>
   </main>
 
-  <script src="landing.js"></script>
+  <script src="dashboard.js"></script>
 </body>
 </html>

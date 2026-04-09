@@ -247,6 +247,119 @@ textarea:focus {
   font-size: 1rem;
 }
 
+.section-panel {
+  padding: 16px;
+  display: grid;
+  gap: 12px;
+}
+
+.section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.section-head h2 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: #0b5a54;
+  background: #d7f3ea;
+  border: 1px solid #aadfce;
+}
+
+.pill-upcoming {
+  color: #1c4870;
+  background: #d9ecfa;
+  border-color: #b8d9f0;
+}
+
+.pill-completed {
+  color: #5e5b00;
+  background: #f7efc8;
+  border-color: #eadb8f;
+}
+
+.cards-grid {
+  display: grid;
+  gap: 10px;
+}
+
+.match-card {
+  background: #f7fffb;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px;
+  display: grid;
+  gap: 8px;
+}
+
+.match-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.match-id {
+  font-family: "IBM Plex Mono", Consolas, monospace;
+  font-size: 0.79rem;
+  color: var(--text-soft);
+}
+
+.match-teams {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.match-meta {
+  margin: 0;
+  color: var(--text-soft);
+  font-size: 0.9rem;
+}
+
+.team-option-card {
+  background: #f7fffb;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px;
+  display: grid;
+  gap: 10px;
+}
+
+.filter-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 10px;
+}
+
+.text-input {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  background: #fcfffe;
+  color: var(--text-main);
+}
+
+.text-input:focus {
+  border-color: var(--accent);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.14);
+}
+
 .results {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -326,6 +439,10 @@ textarea:focus {
   }
 
   .results {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-grid {
     grid-template-columns: 1fr;
   }
 }
