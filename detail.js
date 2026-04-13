@@ -2,9 +2,70 @@ const detailsHeadingEl = document.getElementById("detailsHeading");
 const detailsSubEl = document.getElementById("detailsSub");
 const detailsStatusEl = document.getElementById("detailsStatus");
 const detailsResultsEl = document.getElementById("detailsResults");
+const scoreTeamANameEl = document.getElementById("scoreTeamAName");
+const scoreTeamADescEl = document.getElementById("scoreTeamADesc");
+const scoreTeamAPointsEl = document.getElementById("scoreTeamAPoints");
+const scoreTeamBNameEl = document.getElementById("scoreTeamBName");
+const scoreTeamBDescEl = document.getElementById("scoreTeamBDesc");
+const scoreTeamBPointsEl = document.getElementById("scoreTeamBPoints");
 const detailTeamAEl = document.getElementById("detailTeamA");
 const detailTeamBEl = document.getElementById("detailTeamB");
 const updateTeamLinkEl = document.getElementById("updateTeamLink");
+
+const API_PICKS_ENDPOINT = "/api/match-picks";
+const TEAM_LOGOS_ENDPOINT = "/team-logos.json";
+
+let teamLogos = {};
+
+function getPointsSummary(matches, entries, teamAName, teamBName) {
+  const summary = {
+    [teamAName]: 0,
+    [teamBName]: 0
+  };
+
+  matches.forEach((match) => {
+    const entry = entries[match.id];
+    if (!entry || !entry.winner) {
+      return;
+    }
+
+    if ((entry.teamAssignments || {})[teamAName] === entry.winner) {
+      summary[teamAName] += 1;
+    }
+
+    if ((entry.teamAssignments || {})[teamBName] === entry.winner) {
+      summary[teamBName] += 1;
+    }
+  });
+
+  return summary;
+}
+
+function getTeamLogo(teamName) {
+  return teamLogos[teamName] || { shortCode: teamName, logoUrl: "" };
+}
+
+function createTeamBadge(teamName) {
+  const wrapper = document.createElement("div");
+  const logo = document.createElement("img");
+  const text = document.createElement("span");
+
+  wrapper.className = "score-board-team";
+  logo.className = "score-board-logo";
+  logo.alt = `${teamName} logo`;
+  logo.loading = "lazy";
+
+  const info = getTeamLogo(teamName);
+  logo.src = info.logoUrl || "";
+  logo.hidden = !info.logoUrl;
+
+  text.className = "score-board-team-name";
+  text.textContent = teamName;
+
+  wrapper.appendChild(logo);
+  wrapper.appendChild(text);
+  return wrapper;
+}
 
 function normalizeId(value) {
   const parsed = Number(String(value).trim());
@@ -77,9 +138,41 @@ async function loadDetails() {
     renderTeam(detailTeamAEl, data.teamAName, data.teamAPlayers, data.teamALeaders || { captain: "", viceCaptain: "" });
     renderTeam(detailTeamBEl, data.teamBName, data.teamBPlayers, data.teamBLeaders || { captain: "", viceCaptain: "" });
 
+    const [matchesResponse, picksResponse, logoResponse] = await Promise.all([
+      fetch("ipl-matches.json"),
+      fetch(API_PICKS_ENDPOINT),
+      fetch(TEAM_LOGOS_ENDPOINT)
+    ]);
+
+    if (logoResponse.ok) {
+      teamLogos = await logoResponse.json();
+    }
+
+    const matchesDb = await matchesResponse.json();
+    const picksDb = picksResponse.ok ? await picksResponse.json() : { entries: {} };
+    const summary = getPointsSummary(matchesDb.matches || [], picksDb.entries || {}, data.teamAName, data.teamBName);
+
     detailsHeadingEl.textContent = "Team Details";
     detailsSubEl.textContent = `${data.teamAName} vs ${data.teamBName}`;
     detailsStatusEl.textContent = `Saved at: ${new Date(record.savedAt).toLocaleString()}`;
+
+    scoreTeamANameEl.textContent = data.teamAName;
+    scoreTeamADescEl.textContent = "Your team points";
+    scoreTeamAPointsEl.textContent = String(summary[data.teamAName] || 0);
+    scoreTeamBNameEl.textContent = data.teamBName;
+    scoreTeamBDescEl.textContent = "Your team points";
+    scoreTeamBPointsEl.textContent = String(summary[data.teamBName] || 0);
+
+    const scoreBoard = document.getElementById("scoreBoard");
+    const teamAContainer = document.getElementById("scoreTeamAContainer");
+    const teamBContainer = document.getElementById("scoreTeamBContainer");
+
+    if (teamAContainer && teamBContainer) {
+      teamAContainer.innerHTML = "";
+      teamBContainer.innerHTML = "";
+      teamAContainer.appendChild(createTeamBadge(data.teamAName));
+      teamBContainer.appendChild(createTeamBadge(data.teamBName));
+    }
 
     const allPlayers = [...(data.teamAPlayers || []), ...(data.teamBPlayers || [])];
     const uniquePlayers = [...new Set(allPlayers)];

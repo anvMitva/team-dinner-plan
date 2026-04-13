@@ -1,0 +1,52 @@
+{
+  "Royal Challengers Bengaluru": {
+    "teamId": "19",
+    "shortCode": "RCB",
+    "logoUrl": "https://scores.iplt20.com/ipl/teamlogos/RCB.png"
+  },
+  "Sunrisers Hyderabad": {
+    "teamId": "20",
+    "shortCode": "SRH",
+    "logoUrl": "https://scores.iplt20.com/ipl/teamlogos/SRH.png"
+  },
+  "Mumbai Indians": {
+    "teamId": "17",
+    "shortCode": "MI",
+    "logoUrl": "https://scores.iplt20.com/ipl/teamlogos/MI.png"
+  },
+  "Kolkata Knight Riders": {
+    "teamId": "16",
+    "shortCode": "KKR",
+    "logoUrl": "https://scores.iplt20.com/ipl/teamlogos/KKR.png"
+  },
+  "Rajasthan Royals": {
+    "teamId": "18",
+    "shortCode": "RR",
+    "logoUrl": "https://scores.iplt20.com/ipl/teamlogos/RR.png"
+  },
+  "Chennai Super Kings": {
+    "teamId": "13",
+    "shortCode": "CSK",
+    "logoUrl": "https://scores.iplt20.com/ipl/teamlogos/CSK.png"
+  },
+  "Punjab Kings": {
+    "teamId": "15",
+    "shortCode": "PBKS",
+    "logoUrl": "https://scores.iplt20.com/ipl/teamlogos/PBKS.png"
+  },
+  "Gujarat Titans": {
+    "teamId": "35",
+    "shortCode": "GT",
+    "logoUrl": "https://scores.iplt20.com/ipl/teamlogos/GT.png"
+  },
+  "Lucknow Super Giants": {
+    "teamId": "77",
+    "shortCode": "LSG",
+    "logoUrl": "https://scores.iplt20.com/ipl/teamlogos/LSG.png"
+  },
+  "Delhi Capitals": {
+    "teamId": "14",
+    "shortCode": "DC",
+    "logoUrl": "https://scores.iplt20.com/ipl/teamlogos/DC.png"
+  }
+}

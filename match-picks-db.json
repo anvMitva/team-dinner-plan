@@ -1,0 +1,134 @@
+{
+  "entries": {
+    "IPL2026-014": {
+      "matchId": "IPL2026-014",
+      "teamAssignments": {
+        "Team KRIYA": "Gujarat Titans",
+        "Team AUM": "Delhi Capitals"
+      },
+      "winner": "Gujarat Titans",
+      "updatedAt": "2026-04-09T09:07:22.776Z"
+    },
+    "IPL2026-015": {
+      "matchId": "IPL2026-015",
+      "teamAssignments": {
+        "Team KRIYA": "Lucknow Super Giants",
+        "Team AUM": "Kolkata Knight Riders"
+      },
+      "winner": "Lucknow Super Giants",
+      "updatedAt": "2026-04-10T01:30:00.025Z"
+    },
+    "IPL2026-011": {
+      "matchId": "IPL2026-011",
+      "teamAssignments": {},
+      "winner": "Royal Challengers Bengaluru",
+      "updatedAt": "2026-04-10T01:30:00.025Z"
+    },
+    "IPL2026-010": {
+      "matchId": "IPL2026-010",
+      "teamAssignments": {},
+      "winner": "Lucknow Super Giants",
+      "updatedAt": "2026-04-10T01:30:00.025Z"
+    },
+    "IPL2026-009": {
+      "matchId": "IPL2026-009",
+      "teamAssignments": {},
+      "winner": "Rajasthan Royals",
+      "updatedAt": "2026-04-10T01:30:00.026Z"
+    },
+    "IPL2026-008": {
+      "matchId": "IPL2026-008",
+      "teamAssignments": {},
+      "winner": "Delhi Capitals",
+      "updatedAt": "2026-04-10T01:30:00.026Z"
+    },
+    "IPL2026-007": {
+      "matchId": "IPL2026-007",
+      "teamAssignments": {},
+      "winner": "Punjab Kings",
+      "updatedAt": "2026-04-10T01:30:00.026Z"
+    },
+    "IPL2026-006": {
+      "matchId": "IPL2026-006",
+      "teamAssignments": {},
+      "winner": "Sunrisers Hyderabad",
+      "updatedAt": "2026-04-10T01:30:00.026Z"
+    },
+    "IPL2026-005": {
+      "matchId": "IPL2026-005",
+      "teamAssignments": {},
+      "winner": "Delhi Capitals",
+      "updatedAt": "2026-04-10T01:30:00.026Z"
+    },
+    "IPL2026-004": {
+      "matchId": "IPL2026-004",
+      "teamAssignments": {},
+      "winner": "Punjab Kings",
+      "updatedAt": "2026-04-10T01:30:00.026Z"
+    },
+    "IPL2026-003": {
+      "matchId": "IPL2026-003",
+      "teamAssignments": {},
+      "winner": "Rajasthan Royals",
+      "updatedAt": "2026-04-10T01:30:00.026Z"
+    },
+    "IPL2026-002": {
+      "matchId": "IPL2026-002",
+      "teamAssignments": {},
+      "winner": "Mumbai Indians",
+      "updatedAt": "2026-04-10T01:30:00.026Z"
+    },
+    "IPL2026-001": {
+      "matchId": "IPL2026-001",
+      "teamAssignments": {},
+      "winner": "Royal Challengers Bengaluru",
+      "updatedAt": "2026-04-10T01:30:00.026Z"
+    },
+    "IPL2026-016": {
+      "matchId": "IPL2026-016",
+      "teamAssignments": {
+        "Team KRIYA": "Rajasthan Royals",
+        "Team AUM": "Royal Challengers Bengaluru"
+      },
+      "winner": "Rajasthan Royals",
+      "updatedAt": "2026-04-13T04:48:57.441Z"
+    },
+    "IPL2026-018": {
+      "matchId": "IPL2026-018",
+      "teamAssignments": {
+        "Team KRIYA": "Delhi Capitals",
+        "Team AUM": "Chennai Super Kings"
+      },
+      "winner": "Chennai Super Kings",
+      "updatedAt": "2026-04-13T04:49:10.866Z"
+    },
+    "IPL2026-017": {
+      "matchId": "IPL2026-017",
+      "teamAssignments": {
+        "Team KRIYA": "Punjab Kings",
+        "Team AUM": "Sunrisers Hyderabad"
+      },
+      "winner": "Punjab Kings",
+      "updatedAt": "2026-04-13T04:49:01.667Z"
+    },
+    "IPL2026-020": {
+      "matchId": "IPL2026-020",
+      "teamAssignments": {
+        "Team KRIYA": "Mumbai Indians",
+        "Team AUM": "Royal Challengers Bengaluru"
+      },
+      "winner": "Royal Challengers Bengaluru",
+      "updatedAt": "2026-04-13T04:49:20.610Z"
+    },
+    "IPL2026-019": {
+      "matchId": "IPL2026-019",
+      "teamAssignments": {
+        "Team KRIYA": "Lucknow Super Giants",
+        "Team AUM": "Gujarat Titans"
+      },
+      "winner": "Gujarat Titans",
+      "updatedAt": "2026-04-13T04:49:16.627Z"
+    }
+  },
+  "updatedAt": "2026-04-13T10:50:51.830Z"
+}

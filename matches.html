@@ -26,12 +26,21 @@
     </header>
 
     <section class="panel section-panel">
+      <div class="section-head">
+        <h2>Your Team Points</h2>
+        <span class="pill pill-upcoming">Scoring</span>
+      </div>
+      <div id="pointsTable" class="points-grid"></div>
+    </section>
+
+    <section class="panel section-panel">
       <div class="filter-grid">
-        <input id="searchInput" class="text-input" type="text" placeholder="Search city, venue, stage, ID..." />
+        <input id="searchInput" class="text-input" type="text" placeholder="Search city, stage, team, ID..." />
         <select id="teamFilter" class="text-input">
           <option value="">All Teams</option>
         </select>
         <select id="tagFilter" class="text-input">
+          <option value="today-upcoming" selected>Today + Upcoming</option>
           <option value="all">All Tags</option>
           <option value="today">Today</option>
           <option value="upcoming">Upcoming</option>
@@ -41,7 +50,13 @@
     </section>
 
     <section class="panel section-panel">
-      <h2 id="resultsHeading">Matches</h2>
+      <div class="section-head">
+        <h2 id="resultsHeading">Matches</h2>
+        <div class="page-actions">
+          <button id="syncResultsBtn" class="btn btn-ghost" type="button">Sync Results</button>
+        </div>
+      </div>
+      <p id="syncStatus" class="history-note" hidden></p>
       <div id="allMatches" class="cards-grid"></div>
       <p id="allEmpty" class="history-empty" hidden>No matches found for this filter.</p>
     </section>

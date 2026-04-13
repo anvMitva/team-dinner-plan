@@ -27,6 +27,25 @@
     </header>
 
     <section class="results" id="detailsResults" hidden>
+      <article class="panel score-board" id="scoreBoard">
+        <p class="score-board-kicker">Points Table</p>
+        <div class="score-board-row">
+          <div class="score-board-side">
+            <div id="scoreTeamAContainer"></div>
+            <p class="score-board-label" id="scoreTeamAName"></p>
+            <p class="score-board-sub" id="scoreTeamADesc"></p>
+          </div>
+          <div class="score-board-score" id="scoreTeamAPoints">0</div>
+          <div class="score-board-vs">VS</div>
+          <div class="score-board-score" id="scoreTeamBPoints">0</div>
+          <div class="score-board-side score-board-side-right">
+            <div id="scoreTeamBContainer"></div>
+            <p class="score-board-label score-board-label-right" id="scoreTeamBName"></p>
+            <p class="score-board-sub score-board-sub-right" id="scoreTeamBDesc"></p>
+          </div>
+        </div>
+      </article>
+
       <article class="panel team-card" id="detailTeamA">
         <h2 class="team-title"></h2>
         <ul class="team-list"></ul>
